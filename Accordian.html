@@ -3,124 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <title>CodePen - Bootstrap Accordion With Search Query Reference Guide</title>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="col-lg-12">
-  <div class="container">
-    <div class="row">
-      <section class="panel panel-default">
-        <div class="panel-body">
-
-
-          <div class="row">
-            <div class="col-lg-3">
-              <h1>Animal Files</h1>
-            </div>
-
-            <div class="col-lg-9">
-              <div class="input-group">
-                <span class="input-group-btn">
-        <button class="btn btn-default" type="button">
-<i class="fa fa-search" aria-hidden="true"></i></button>
-      </span>
-                <input type="search" id="accordion_search_bar" class="form-control" placeholder="Typing in a word like 'legless' will make snake the only accordion row available.">
-              </div>
-              <!-- /input-group -->
-            </div>
-            <!-- /.col-lg-6 -->
-          </div>
-          <div class="row">
-            <div class="col-lg-12 col-xs-12">
-
-
-              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default" id="collapseOne_container">
-                  <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title">
-          <a role="button" 
-             data-toggle="collapse" 
-             data-parent="#accordion" 
-             href="#collapseOne" 
-             aria-expanded="true" 
-             aria-controls="collapseOne">
-           <i class="fa fa-paw fa-fw" aria-hidden="true"></i>Lion
-          </a>
-        </h4>
-                  </div>
-                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                      <p>The lion (Panthera leo) is one of the big cats in the genus Panthera and a member of the family Felidae. The commonly used term African lion collectively denotes the several subspecies in Africa. With some males exceeding 250 kg
-                        (550 lb) in weight, it is the second-largest living cat after the tiger. Wild lions currently exist in sub-Saharan Africa and in India (where an endangered remnant population resides in Gir Forest National Park). In ancient historic
-                        times, their range was in most of Africa, including North Africa, and across Eurasia from Greece and southeastern Europe to India. In the late Pleistocene, about 10,000 years ago, the lion was the most widespread large land mammal
-                        after humans: Panthera leo spelaea lived in northern and western Europe and Panthera leo atrox lived in the Americas from the Yukon to Peru.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default" id="collapseTwo_Container">
-                  <div class="panel-heading" role="tab" id="headingTwo">
-                    <h4 class="panel-title">
-          <a class="collapsed" 
-             role="button" 
-             data-toggle="collapse" 
-             data-parent="#accordion" 
-             href="#collapseTwo" 
-             aria-expanded="false" 
-             aria-controls="collapseTwo">
-           <i class="fa fa-paw fa-fw" aria-hidden="true"></i>Snake
-          </a>
-        </h4>
-                  </div>
-                  <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body">
-                      <p>Snakes are elongated, legless, carnivorous reptiles of the suborder Serpentes that can be distinguished from legless lizards by their lack of eyelids and external ears. Like all squamates, snakes are ectothermic, amniote vertebrates
-                        covered in overlapping scales. Many species of snakes have skulls with several more joints than their lizard ancestors, enabling them to swallow prey much larger than their heads with their highly mobile jaws. To accommodate their
-                        narrow bodies, snakes' paired organs (such as kidneys) appear one in front of the other instead of side by side, and most have only one functional lung. Some species retain a pelvic girdle with a pair of vestigial claws on either
-                        side of the cloaca.</p>
-                        <iframe width="800px" height="600px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=lA3pzUGwMkSt27vGRA7WvrpPuvy34R5AvN-xv__TIq1UM1M4WElFQUlXWE5PTDJLSEYwWDExTDQyVS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default" id="collapseThree_Container">
-                  <div class="panel-heading" role="tab" id="headingThree">
-                    <h4 class="panel-title">
-          <a class="collapsed" 
-             role="button" 
-             data-toggle="collapse" 
-             data-parent="#accordion" 
-             href="#collapseThree" 
-             aria-expanded="false" 
-             aria-controls="collapseThree">
-          <i class="fa fa-paw fa-fw" aria-hidden="true"></i>Meerkat
-          </a>
-        </h4>
-                  </div>
-                  <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
-                    <div class="panel-body">
-                      <p>The meerkat or suricate (Suricata suricatta) is a small carnivoran belonging to the mongoose family (Herpestidae). It is the only member of the genus Suricata. Meerkats live in all parts of the Kalahari Desert in Botswana, in much
-                        of the Namib Desert in Namibia and southwestern Angola, and in South Africa. A group of meerkats is called a "mob", "gang" or "clan". A meerkat clan often contains about 20 meerkats, but some super-families have 50 or more members.
-                        In captivity, meerkats have an average life span of 12–14 years, and about half this in the wild.</p>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScwt07fBFUhdpciYm6BUaeV1jkMCl5eVbXeb5ZDuhZ9aHchZw/viewform?embedded=true" width="800" height="600" frameborder="0"      marginheight="0" marginwidth="0">Loading…</iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p>Information is provided by Wikipedia</p>
-            </div>
-
-
-          </div>
-          <!-- Row -->
-        </div>
-        <!-- Col -->
+<div class="accordion accordion-flush col-12 p-5 col-lg-10 col-xl-8 mx-auto" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Build Your Partner
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"><p>
+        Through the use of several additional variables, you can customize your partner preferences before going on a date. 
+        </p> 
+        <p>
+          <code>Is having a different second language a red flag?</code> Just make it a priority.
+        </p>
+      <p>
+       <span>Is a smilar IQ a green flag?</span> Just make it a priority as well.
+        </p>
+      <p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScwt07fBFUhdpciYm6BUaeV1jkMCl5eVbXeb5ZDuhZ9aHchZw/viewform?embedded=true" width="100%" height="90%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </p>
+      </div>
     </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Catfish Protection and Bot Avoidance
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <p>
+          Through the use of video authentcation performed by real humans, you can match without worry. 
+        </p>
+        <p>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfEnZRT1dUquZkVYO3Lvh9-aOwkfzDjr01O67N2zmuOakvBSQ/viewform?embedded=true" width="100%" height="75%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        User protection
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <p>
+          Advanced user protection features to ensure the safety and security of our members.
+        </p>
+        <p>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyL0iomti17cxaXO26DtZV2y1N34oe9JJef0n3qgNCVqMIWQ/viewform?embedded=true" width="100%" height="95%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Container -->
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
 </body>
 </html>
