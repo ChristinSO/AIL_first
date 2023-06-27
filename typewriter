@@ -38,3 +38,75 @@
 <div class="container">
   <div class="typewriter">I'm Front end Developer</div>
 </div>
+
+----------------------------------------------------------------------------------------------------------------------------
+
+<style>
+.grid-cell {
+  background: grey;
+  position: absolute;
+  padding: 20px 30px;
+  transition: width .2s;
+  cursor: pointer;
+}
+
+.grid-cell.truncated {
+  width: 70px;
+}
+
+p {
+  font-size: 4.0em;
+  margin: 0;
+  text-overflow: ellipsis;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+p.small {
+  font-size: 2em;
+}
+
+p.description {
+  font-size: 1em;
+}
+</style>
+
+<p class="description">This demo creates a grid cell and adds it to the DOM. Before it's rendered we get the width of it's contents so we know how wide it should be when we mouse over it</p>
+
+<br/>
+<br/>
+
+<script>
+// create a grid cell in JS
+let title = document.createElement('p');
+title.innerText = 'This is a title that is retarded';
+
+let description = document.createElement('p');
+description.className = 'small';
+description.innerText = 'But some retard decide to make it worse';
+
+let gridCell = document.createElement('div');
+gridCell.className = 'grid-cell';
+gridCell.appendChild(title);
+gridCell.appendChild(description);
+
+// add it to the DOM
+document.body.appendChild(gridCell);
+
+// get the width from the untruncated grid cell
+myWidth = title.getBoundingClientRect().width;
+
+// truncate it
+gridCell.className = 'grid-cell truncated';
+
+// add some pure JS mouse events for the demo
+gridCell.addEventListener('mouseover', function () {
+  gridCell.className = 'grid-cell';
+  gridCell.style.width = myWidth + 'px';
+});
+
+gridCell.addEventListener('mouseout', function () {
+  gridCell.className = 'grid-cell truncated';
+  gridCell.style.width = '';
+});>
