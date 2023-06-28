@@ -1,112 +1,101 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700">
+<h1>
+<span class="text_1">Fancy heading on your static web page</span><span class="text_2">What?? How does it change without javascript?</span>
+</h1>
+
 <style>
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-size: clamp(2rem, 2.8vw, 5rem);
-  font-family: Raleway;
-  font-weight: bold;
+@keyframes text2 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  
+  60%, 90% {
+    width: 21.2em;
+  }
 }
-
-.typewriter {
-  width: 21.5ch;
-  white-space: nowrap;
+@keyframes text1 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  10%, 40% {
+    width: 17em;
+  }
+}
+.text_1 {
+  animation: text1;
+}
+.text_2 {
+  animation: text2;
+}
+.text_1, .text_2 {
   overflow: hidden;
-  border-right: 4px solid #212121;
-  animation: cursor 1s step-start infinite, 
-    text 5s steps(18) alternate infinite;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 20s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+.text_1::after, .text_2::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
 }
 
-@keyframes cursor {
-  0%, 100% { 
-    border-color: #212121; 
-  }
-}
-
-@keyframes text {
-  0% { 
-    width: 0; 
-  }
-  100% { 
-    width: 21.5ch; 
-  }
-}
 </style>
 
-<div class="container">
-  <div class="typewriter">I'm Front end Developer</div>
+-----------------------------------------------------------------------option 2
+
+<div class="input-wrapper">
+  <input aria-label="Ask us anything">
+  <span class="placeholder"></span>
 </div>
 
-----------------------------------------------------------------------------------------------------------------------------
-
 <style>
-.grid-cell {
-  background: grey;
-  position: absolute;
-  padding: 20px 30px;
-  transition: width .2s;
-  cursor: pointer;
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  width: 100%;
 }
 
-.grid-cell.truncated {
-  width: 70px;
+.input-wrapper {
+  display: block;
+  font-family: monospace;
+  font-size: 125%;
+  width: 50%;
+  > input,
+  > .placeholder {
+    display: block;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+  }
+  > .placeholder {
+    pointer-events: none;
+    @include typed(
+      "How many roads must a man walk down before you call him a man?",
+      "How many seas must a white dove sail before she sleeps in the sand?",
+      "The answer, my friend, is blowin' in the wind",
+      1.5,
+      (
+        caret-width: 2px,
+        caret-space: 2px
+      )
+    );
+  }
+  > input {
+    &:focus,
+    &:active {
+      + .placeholder {
+        display: none;
+      }
+    }
+  }
 }
 
-p {
-  font-size: 4.0em;
-  margin: 0;
-  text-overflow: ellipsis;
-  position: relative;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-p.small {
-  font-size: 2em;
-}
-
-p.description {
-  font-size: 1em;
-}
 </style>
-
-<p class="description">This demo creates a grid cell and adds it to the DOM. Before it's rendered we get the width of it's contents so we know how wide it should be when we mouse over it</p>
-
-<br/>
-<br/>
-
-<script>
-// create a grid cell in JS
-let title = document.createElement('p');
-title.innerText = 'This is a title that is retarded';
-
-let description = document.createElement('p');
-description.className = 'small';
-description.innerText = 'But some retard decide to make it worse';
-
-let gridCell = document.createElement('div');
-gridCell.className = 'grid-cell';
-gridCell.appendChild(title);
-gridCell.appendChild(description);
-
-// add it to the DOM
-document.body.appendChild(gridCell);
-
-// get the width from the untruncated grid cell
-myWidth = title.getBoundingClientRect().width;
-
-// truncate it
-gridCell.className = 'grid-cell truncated';
-
-// add some pure JS mouse events for the demo
-gridCell.addEventListener('mouseover', function () {
-  gridCell.className = 'grid-cell';
-  gridCell.style.width = myWidth + 'px';
-});
-
-gridCell.addEventListener('mouseout', function () {
-  gridCell.className = 'grid-cell truncated';
-  gridCell.style.width = '';
-});>
